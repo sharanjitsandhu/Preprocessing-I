@@ -49,12 +49,169 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+//variables
+@font-stack: 'Roboto', Arial, sans-serif;
+@custom-color: navy;
+
+
 * {
     box-sizing: border-box;
 }
-
 html, body {
 	height: 100%;
-	background-color: yellow;
 }
+
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: @font-stack;
+	/* Header Styles */
+
+	h1, h2, h3, h4 {
+		margin: 20px 0;
+	  }
+	
+	  h1 {
+		font-size: 30px + 10;
+		color: @custom-color;
+		
+		@media  (max-width: 500px) {
+		  color:white;
+		}
+		
+	  }
+
+    header {
+    width: 100%;
+    display: flex;
+}
+
+    header nav {
+    margin-top: 40px; 
+    width: 610px;
+    justify-content: space-between;
+	display: flex;
+	align-items: baseline;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Profile */
+
+.profile {
+    display: flex;
+    margin-top: 72px;
+	justify-content: flex-start;
+	
+}
+
+.profile .profile-text {
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    margin: 20 0px;
+}
+
+ .profile img {
+	height: 260px;
+	width: 190px;	
+ }
+
+/* Main Content Styles */
+
+.main-content {
+	border-top: 2px solid black; 
+	border-bottom: 2px solid black;
+	margin: 75px 0 35px 0;
+	padding: 35px 0;
+	font-size: 16px;
+	line-height: 18px;
+ }
+ 
+ .main-content .top-content {
+	 display: flex;
+ }
+ .main-content .top-content .text-content {
+    display: flex;
+ }
+ .main-content .bottom-content {
+	 display: flex;
+ }
+ 
+ .main-content .bottom-content p {
+	 padding-right: 20px;
+ }
+ 
+ /* Contact Styles */
+ 
+ .contact p {
+	 margin: 15px 0;
+ }
+ 
+ /* Footer Styles */
+ 
+ footer {
+	 text-align: center;
+	 margin: 40px 0 20px;
+ }
+ 
+ /* Tablet */
+ @media (max-width: 500px) {
+ 
+	 .container {
+		 width: 100%;
+	 }
+ 
+	 header {
+		 flex-wrap: wrap;
+	 }
+ 
+	 header nav {
+		 width: 768px;
+		 padding: 0 30px;
+	 }
+ 
+	 .profile {
+		 justify-content: center;
+	 }
+ 
+	 .profile .profile-text {
+		 margin: 0;
+	 }
+ 
+	 .profile img {
+		 display: flex;
+		 
+	 }
+ 
+	 .main-content {
+		margin: 75px 20px 35px;
+	 }
+ 
+	 .text-content {
+		 margin: 0 10px;
+	 }
+ 
+	 .contact {
+		 margin: 0 30px;
+	 }
+ }
+}
+
+
+
 
